@@ -6,6 +6,7 @@ export ZSH="${HOME}/.oh-my-zsh"
 export PATH="${HOME}/custom_scripts/:${PATH}"
 export PATH="${HOME}/.config/rofi/applets/bin:${PATH}"
 export PATH="${HOME}/.fzf/bin:${PATH}"
+#export PATH="$PATH:$HOME/.dotnet/tools/"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -133,6 +134,4 @@ function nopen()
 }
 # enable vim mode
 bindkey -v
-
-
 
