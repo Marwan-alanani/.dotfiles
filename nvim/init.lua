@@ -1,4 +1,3 @@
-vim.opt.termguicolors = true
 --[[
     If you don't know anything about Lua, I recommend taking some time to read through
     a guide. One possible example which will only take 10-15 minutes:
@@ -28,12 +27,6 @@ vim.g.have_nerd_font = true
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
 
--- Make line numbers default
-vim.opt.number = true
--- You can also add relative line numbers, to help with jumping.
---  Experiment for yourself to see if you like it!
-vim.opt.relativenumber = true
-
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = 'a'
 
@@ -54,18 +47,9 @@ end)
 -- Enable break indent
 vim.opt.breakindent = true
 
--- Save undo history
-vim.opt.undofile = true
-
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
-
--- Keep signcolumn on by default
-vim.opt.signcolumn = 'yes'
-
--- Decrease update time
-vim.opt.updatetime = 250
 
 -- Decrease mapped sequence wait time
 vim.opt.timeoutlen = 300
@@ -86,9 +70,7 @@ vim.opt.inccommand = 'split'
 -- Show which line your cursor is on
 vim.opt.cursorline = true
 
--- Minimal number of screen lines to keep above and below the cursor.
-vim.opt.scrolloff = 10
-
+require 'custom.set'
 require 'custom.maps'
 
 local augroup = vim.api.nvim_create_augroup
@@ -190,7 +172,7 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
-  'github/copilot.vim',
+  -- 'github/copilot.vim',
 
   -- NOTE: Plugins can also be added by using a table,
   -- with the first argument being the link and the following
