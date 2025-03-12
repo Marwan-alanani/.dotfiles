@@ -7,7 +7,6 @@ return {
       require('kanagawa').setup {
         theme = 'dragon',
       }
-      vim.cmd 'colorscheme kanagawa-dragon'
     end,
   },
   {
@@ -15,9 +14,7 @@ return {
     name = 'rose-pine',
     config = function()
       ---@diagnostic disable-next-line: missing-fields
-      require('rose-pine').setup {
-        disable_background = true,
-      }
+      require('rose-pine').setup {}
     end,
   },
 
@@ -34,6 +31,7 @@ return {
     config = function()
       ---@diagnostic disable-next-line: missing-fields
       require('nordic').setup {}
+      vim.cmd 'colorscheme nordic'
     end,
   },
   {
@@ -42,6 +40,14 @@ return {
     config = function()
       ---@diagnostic disable-next-line: missing-fields
       require('gruvbox').setup {}
+    end,
+  },
+  {
+    'EdenEast/nightfox.nvim',
+    name = 'nightfox',
+    config = function()
+      ---@diagnostic disable-next-line: missing-fields
+      require('nightfox').setup()
     end,
   },
 }

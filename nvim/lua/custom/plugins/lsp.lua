@@ -23,10 +23,9 @@ return {
     require('mason-lspconfig').setup {
       ensure_installed = {
         'lua_ls',
-        'eslint',
         'pyright',
         'clangd',
-        'omnisharp',
+        'ts_ls',
       },
       handlers = {
         function(server_name) -- default handler (optional)
@@ -64,7 +63,6 @@ return {
         ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
         ['<C-y>'] = cmp.mapping.confirm { select = true },
         ['<C-Space>'] = cmp.mapping.complete(),
-        ['<C-e>'] = cmp.mapping.open_docs(),
       },
       sources = cmp.config.sources({
         { name = 'nvim_lsp' },
