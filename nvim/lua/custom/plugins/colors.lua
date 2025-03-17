@@ -20,10 +20,13 @@ return {
           italic = false,
         },
         palette = {
+
           moon = {
-            surface = '#333333', -- window colors
-            base = '#272727', -- this is the background color
-            overlay = '#333333', -- highlight color
+            surface = '#2a2a2a', -- window colors
+            base = '#1a1a1a', -- this is the background color
+            overlay = '#2a2a2a', -- highlight color
+
+            -- foam = '#ffffff', --variable colors
           },
           main = {
             surface = '#333333',

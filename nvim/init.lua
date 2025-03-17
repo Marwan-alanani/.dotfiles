@@ -110,37 +110,41 @@ autocmd('LspAttach', {
   group = ElMaro,
   callback = function(e)
     local opts = { buffer = e.buf }
+    vim.keymap.set('n', '<leader>th', function()
+      vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled { bufnr = e.buf })
+    end, { buffer = e.buf, desc = 'Toggle inlay hints' })
+
     vim.keymap.set('n', 'gd', function()
       vim.lsp.buf.definition()
-    end, { desc = '[G]o to [D]efinition' })
+    end, { desc = '[G]o to [D]efinition', buffer = e.buf })
 
     vim.keymap.set('n', 'K', function()
       vim.lsp.buf.hover()
-    end, { desc = 'Hover Doc' })
+    end, { desc = 'Hover Doc', buffer = e.buf })
 
     vim.keymap.set('n', '<leader>vws', function()
       vim.lsp.buf.workspace_symbol()
-    end, { desc = 'View Workspace Symbols' })
+    end, { desc = 'View Workspace Symbols', buffer = e.buf })
 
     vim.keymap.set('n', '<leader>vd', function()
       vim.diagnostic.open_float()
-    end, { desc = 'View Diagnostics' })
+    end, { desc = 'View Diagnostics', buffer = e.buf })
 
     vim.keymap.set('n', '<leader>ca', function()
       vim.lsp.buf.code_action()
-    end, { desc = '[C]ode [A]ction' })
+    end, { desc = '[C]ode [A]ction', buffer = e.buf })
 
     vim.keymap.set('n', '<leader>vr', function()
       vim.lsp.buf.references()
-    end, { desc = '[V]iew [R]eferences' })
+    end, { desc = '[V]iew [R]eferences', buffer = e.buf })
 
     vim.keymap.set('n', '<leader>rn', function()
       vim.lsp.buf.rename()
-    end, { desc = '[R]e[n]ame' })
+    end, { desc = '[R]e[n]ame', buffer = e.buf })
 
-    vim.keymap.set('i', '<C-h>', function()
+    vim.keymap.set('i', '<C-k>', function()
       vim.lsp.buf.signature_help()
-    end, { desc = 'Signature [H]elp' })
+    end, { desc = 'Signature Help', buffer = e.buf })
 
     vim.keymap.set('n', '[d', function()
       vim.diagnostic.get_next()
@@ -168,9 +172,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
--- NOTE: Here is where you install your plugins.
 require('lazy').setup({
-  -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
   -- 'github/copilot.vim',
 
@@ -463,6 +465,7 @@ require('lazy').setup({
   },
 })
 
+-- have inlay hints enabled by default
 vim.lsp.inlay_hint.enable()
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
