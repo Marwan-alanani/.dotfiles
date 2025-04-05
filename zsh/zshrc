@@ -7,6 +7,8 @@ export PATH="${HOME}/custom_scripts/:${PATH}"
 export PATH="${HOME}/.config/rofi/applets/bin:${PATH}"
 export PATH="${HOME}/.fzf/bin:${PATH}"
 
+export GREP_OPTIONS='--color=auto'
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -85,7 +87,6 @@ plugins=(
   git
   zsh-syntax-highlighting
   colored-man-pages
-  zsh-autosuggestions
   python
   z
   )
@@ -123,14 +124,21 @@ alias cn='code -n'
 alias mv="mv -i"
 
 conda='/home/marwan/.config/jupyterlab-desktop/jlab_server/bin/activate'
+
+#open file from terminal with no hangup call
 function nopen()
 {
 	nohup open $1 &
 	if [ -d $1 ];then
-		sleep 0.5;
-		rm "$1/nohup.out"
+	  sleep 0.5;
+	  rm "$1/nohup.out"
+	else
+	  dir=$(dirname $1)
+	  sleep 0.5
+	  rm "${dir}/nohup.out"
 	fi
 }
+
 # enable vim mode
 bindkey -v
 
