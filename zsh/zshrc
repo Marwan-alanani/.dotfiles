@@ -122,6 +122,7 @@ fi
 alias edit='gnome-text-editor'
 alias cn='code -n'
 alias mv="mv -i"
+alias vim="nvim"
 
 conda='/home/marwan/.config/jupyterlab-desktop/jlab_server/bin/activate'
 

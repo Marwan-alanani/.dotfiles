@@ -1,3 +1,10 @@
+function Color(color)
+  color = color or 'rose-pine-moon'
+  vim.cmd.colorscheme(color)
+  vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
+  vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
+end
+
 return {
   {
     'https://github.com/rose-pine/neovim.git',
@@ -5,24 +12,22 @@ return {
     config = function()
       ---@diagnostic disable-next-line: missing-fields
       require('rose-pine').setup {
+        disable_background = true,
         styles = {
-          bold = false,
           italic = false,
         },
         palette = {
           moon = {
-            surface = '#2a2a2a', -- window colors
-            base = '#1a1a1a', -- this is the background color
-            overlay = '#2F2F2F', -- highlight color
+            base = '#121212', -- background color
+            surface = '#2f2f2f', -- window colors
           },
           main = {
-            surface = '#2a2a2a', -- window colors
-            base = '#1a1a1a', -- this is the background color
-            overlay = '#2F2F2F', -- highlight color
+            base = '#121212', -- background color
+            surface = '#2f2f2f', -- window colors
           },
         },
       }
-      vim.cmd 'colorscheme rose-pine-moon'
+      Color()
     end,
   },
 
@@ -31,7 +36,9 @@ return {
     name = 'github-theme',
     config = function()
       require('github-theme').setup {
-        -- ...
+        options = {
+          transparent = true,
+        },
       }
     end,
   },
@@ -42,7 +49,25 @@ return {
     config = function()
       require('onedark').setup {
         style = 'warmer',
+        transparent = true,
       }
     end,
+  },
+
+  {
+    'vague2k/vague.nvim',
+    name = 'vague',
+    config = function()
+      -- NOTE: you do not need to call setup if you don't want to.
+      require('vague').setup {
+        -- optional configuration here
+      }
+    end,
+  },
+
+  {
+    'forest-nvim/sequoia.nvim',
+    name = 'sequoia',
+    config = function() end,
   },
 }
