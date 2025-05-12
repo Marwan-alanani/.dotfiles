@@ -1,0 +1,138 @@
+" .ideavimrc is a configuration file for IdeaVim plugin. It uses
+"   the same commands as the original .vimrc configuration.
+" You can find a list of commands here: https://jb.gg/h38q75
+" Find more examples here: https://jb.gg/share-ideavimrc
+
+" Remap escape to capslock to not use your pinky
+" !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+
+set scrolloff=5
+" change leader
+let mapleader=" "
+
+" Do incremental searching.
+set incsearch
+
+" sync ide marks with vim marks
+set ideamarks
+
+" relative line numbers
+set number
+set relativenumber
+
+" Search faster through f and F
+" set quickscope
+
+" Don't use Ex mode, use Q for formatting.
+nmap Q gq
+" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
+
+" nerd tree
+" Plug 'preservim/nerdtree'
+
+nmap <leader>e <Action>(ActivateProjectToolWindow)
+
+nmap <leader>f <Action>(ReformatCode)
+" capital y yanks till the end of the line
+nmap Y y$
+
+"search files
+nmap <leader>sf <Action>(GotoFile)
+
+"search classes
+nmap  <leader>sc <Action>(GotoClass)
+
+" search workspace symbols
+nmap  <leader>ss <Action>(GotoSymbol)
+
+" search by grep
+nmap <leader>sg <Action>(FindInPath)
+
+" go to type declaration(view  type declaration)
+nmap <leader>vt <Action>(GotoTypeDeclaration)
+
+" run
+nmap <leader>ru <Action>(Run)
+"rename
+nmap <leader>rn <Action>(RenameElement)
+
+"view tool buttons
+nmap <leader>/ <Action>(ViewToolButtons)
+
+"open run tool window
+nmap <leader>or <Action>(ActivateRunToolWindow)
+
+"open commit tool window
+nmap <leader>oc <Action>(ActivateCommitToolWindow)
+
+"view Recently Edited Files
+nmap <leader>vr <Action>(RecentFiles)
+
+"create new Element i.e class interface ...
+nmap <leader>ce <Action>(NewElement)
+
+Plug 'easymotion/vim-easymotion'
+
+" Highlight copied text
+Plug 'machakann/vim-highlightedyank'
+
+" Commentary plugin
+Plug 'tpope/vim-commentary'
+
+" Vim surround plugin
+Plug 'tpope/vim-surround'
+
+" Multiple cursors plugin
+Plug 'terryma/vim-multiple-cursors'
+
+" Remap multiple-cursors shortcuts to match terryma/vim-multiple-cursors
+nmap <C-n> <Plug>NextWholeOccurrence
+xmap <C-n> <Plug>NextWholeOccurrence
+nmap g<C-n> <Plug>NextOccurrence
+xmap g<C-n> <Plug>NextOccurrence
+xmap <C-x> <Plug>SkipOccurrence
+xmap <C-p> <Plug>RemoveOccurrence
+
+" Change Accept Lookup Item
+imap <C-y> <Action>(EditorChooseLookupItem)
+
+" move statements up and down
+vmap J  <Action>(MoveStatementDown)
+vmap K  <Action>(MoveStatementUp)
+
+"quick navigation
+nmap <leader>gd <Action>(GotoDeclaration)
+nmap <leader>gy <Action>(GotoTypeDeclaration)
+nmap <leader>gi <Action>(GotoImplementation)
+
+"improved search
+set hlsearch
+set ideajoin
+nmap <Esc> :nohlsearch<cr>
+set ignorecase
+set smartcase
+set incsearch
+
+" Note that the default <A-n> and g<A-n> shortcuts don't work on Mac due to dead keys.
+" <A-n> is used to enter accented text e.g. ñ
+" Feel free to pick your own mappings that are not affected. I like to use <leader>
+"
+nmap <leader><C-n> <Plug>AllWholeOccurrences
+xmap <leader><C-n> <Plug>AllWholeOccurrences
+nmap <leader>g<C-n> <Plug>AllOccurrences
+xmap <leader>g<C-n> <Plug>AllOccurrences
+
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+"" Map \r to the Reformat Code action
+"map \r <Action>(ReformatCode)
+
+"" Map <leader>d to start debug
+"map <leader>d <Action>(Debug)
+
+"" Map \b to toggle the breakpoint on the current line
+"map \b <Action>(ToggleLineBreakpoint)
