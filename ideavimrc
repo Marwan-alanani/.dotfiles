@@ -27,12 +27,21 @@ set relativenumber
 " Search faster through f and F
 " set quickscope
 
+" Full screen (presentationMode)
+" for some reason leader f only doesn't work
+nmap <leader>fs <Action>(TogglePresentationMode)
+
 " Don't use Ex mode, use Q for formatting.
 nmap Q gq
 " --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
 
 " nerd tree
 " Plug 'preservim/nerdtree'
+
+" easier managing of clipboard copy and paste
+vmap <leader>y "+y
+nmap <leader>y "+p
+nmap <leader>p "+p
 
 nmap <leader>e <Action>(ActivateProjectToolWindow)
 
@@ -52,8 +61,6 @@ nmap  <leader>ss <Action>(GotoSymbol)
 " search by grep
 nmap <leader>sg <Action>(FindInPath)
 
-" go to type declaration(view  type declaration)
-nmap <leader>vt <Action>(GotoTypeDeclaration)
 
 " run
 nmap <leader>ru <Action>(Run)
@@ -105,9 +112,13 @@ vmap J  <Action>(MoveStatementDown)
 vmap K  <Action>(MoveStatementUp)
 
 "quick navigation
-nmap <leader>gd <Action>(GotoDeclaration)
-nmap <leader>gy <Action>(GotoTypeDeclaration)
-nmap <leader>gi <Action>(GotoImplementation)
+
+nmap gd <Action>(GotoDeclaration)
+nmap gy <Action>(GotoTypeDeclaration)
+nmap gi <Action>(GotoImplementation)
+
+" go to type declaration(view  type declaration)
+"nmap <leader>vt <Action>(GotoTypeDeclaration)
 
 "improved search
 set hlsearch

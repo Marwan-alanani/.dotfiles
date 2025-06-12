@@ -7,7 +7,7 @@ return {
       require('harpoon').setup {}
 
       vim.keymap.set('n', '<leader>ho', '<cmd>lua require("harpoon.ui").toggle_quick_menu()<CR>', { desc = '[H]arpoon [O]pen' })
-      vim.keymap.set('n', 'ha', '<cmd>lua require("harpoon.mark").add_file()<CR>', { desc = '[H]arpoon [A]dd' })
+      vim.keymap.set('n', '<leader>ha', '<cmd>lua require("harpoon.mark").add_file()<CR>', { desc = '[H]arpoon [A]dd' })
       vim.keymap.set('n', '<leader>h1', "<cmd>lua require('harpoon.ui').nav_file(1)<CR>", { desc = '[H]arpoon 1' })
       vim.keymap.set('n', '<leader>h2', "<cmd>lua require('harpoon.ui').nav_file(2)<CR>", { desc = '[H]arpoon 2' })
       vim.keymap.set('n', '<leader>h3', "<cmd>lua require('harpoon.ui').nav_file(3)<CR>", { desc = '[H]arpoon 3' })

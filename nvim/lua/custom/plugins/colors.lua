@@ -13,6 +13,7 @@ return {
       ---@diagnostic disable-next-line: missing-fields
       require('rose-pine').setup {
         disable_background = true,
+        extend_background_behind_borders = false,
         styles = {
           italic = false,
         },
@@ -68,6 +69,25 @@ return {
   {
     'forest-nvim/sequoia.nvim',
     name = 'sequoia',
-    config = function() end,
+    config = function()
+      -- Color 'sequoia-night'
+    end,
+  },
+  -- muted is the way to go
+  {
+    'wtfox/jellybeans.nvim',
+    opts = {}, -- Optional
+    config = function()
+      -- Color 'jellybeans'
+    end,
+  },
+
+  -- the dragon one is great
+  {
+    'rebelot/kanagawa.nvim',
+    opts = {},
+    config = function()
+      -- Color 'kanagawa-dragon'
+    end,
   },
 }
