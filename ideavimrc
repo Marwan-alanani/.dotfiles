@@ -124,7 +124,7 @@ nmap gi <Action>(GotoImplementation)
 "improved search
 set hlsearch
 set ideajoin
-nmap <Esc> :nohlsearch<cr>
+nmap <Esc> :nohlsearch<CR>
 set ignorecase
 set smartcase
 set incsearch
