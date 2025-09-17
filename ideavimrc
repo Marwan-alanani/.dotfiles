@@ -3,9 +3,6 @@
 " You can find a list of commands here: https://jb.gg/h38q75
 " Find more examples here: https://jb.gg/share-ideavimrc
 
-" Remap escape to capslock to not use your pinky
-" !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
-
 "" -- Suggested options --
 " Show a few lines of context around the cursor. Note that this makes the
 " text scroll if you mouse-click near the start or end of the window.
@@ -28,8 +25,7 @@ set relativenumber
 " set quickscope
 
 " Full screen (presentationMode)
-" for some reason leader f only doesn't work
-nmap <leader>fs <Action>(TogglePresentationMode)
+nmap <leader>z <Action>(TogglePresentationMode)
 
 " Don't use Ex mode, use Q for formatting.
 nmap Q gq
@@ -42,10 +38,16 @@ nmap Q gq
 vmap <leader>y "+y
 nmap <leader>y "+p
 nmap <leader>p "+p
+vmap <leader>p "+p
 
-nmap <leader>e <Action>(ActivateProjectToolWindow)
+" Open Project Explorer and return focus to editor
+nmap <leader>e :action ActivateProjectToolWindow<CR><ESC>
+" Hide project explorer
+nmap <leader>h <Action>(HideActiveWindow)
 
+"format document
 nmap <leader>f <Action>(ReformatCode)
+
 " capital y yanks till the end of the line
 nmap Y y$
 
@@ -79,7 +81,7 @@ nmap <leader>oc <Action>(ActivateCommitToolWindow)
 "view Recently Edited Files
 nmap <leader>vr <Action>(RecentFiles)
 
-"create new Element i.e class interface ...
+"create new Element i.e class,interface ...
 nmap <leader>ce <Action>(NewElement)
 
 Plug 'easymotion/vim-easymotion'
@@ -108,11 +110,10 @@ xmap <C-p> <Plug>RemoveOccurrence
 imap <C-y> <Action>(EditorChooseLookupItem)
 
 " move statements up and down
-vmap J  <Action>(MoveStatementDown)
-vmap K  <Action>(MoveStatementUp)
+xmap J :m '>+1<CR>gv=gv
+xmap K :m '<-2<CR>gv=gv
 
 "quick navigation
-
 nmap gd <Action>(GotoDeclaration)
 nmap gy <Action>(GotoTypeDeclaration)
 nmap gi <Action>(GotoImplementation)
