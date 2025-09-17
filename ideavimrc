@@ -63,6 +63,11 @@ nmap  <leader>ss <Action>(GotoSymbol)
 " search by grep
 nmap <leader>sg <Action>(FindInPath)
 
+" Show hover info
+nmap K <Action>(ShowHoverInfo)
+imap <C-k> <Action>(ShowHoverInfo)
+
+
 
 " run
 nmap <leader>ru <Action>(Run)
@@ -71,6 +76,9 @@ nmap <leader>rn <Action>(RenameElement)
 
 "view tool buttons
 nmap <leader>/ <Action>(ViewToolButtons)
+
+"view quick implementation (definition)
+nmap vi <Action>(QuickImplementations)
 
 "open run tool window
 nmap <leader>or <Action>(ActivateRunToolWindow)
