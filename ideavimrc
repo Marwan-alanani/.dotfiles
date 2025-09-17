@@ -77,8 +77,8 @@ nmap <leader>rn <Action>(RenameElement)
 "view tool buttons
 nmap <leader>/ <Action>(ViewToolButtons)
 
-"view quick implementation (definition)
-nmap vi <Action>(QuickImplementations)
+"open definiton(shows a popup with definition)
+nmap <leader>od <Action>(QuickImplementations)
 
 "open run tool window
 nmap <leader>or <Action>(ActivateRunToolWindow)
@@ -88,6 +88,13 @@ nmap <leader>oc <Action>(ActivateCommitToolWindow)
 
 "view Recently Edited Files
 nmap <leader>vr <Action>(RecentFiles)
+
+" view usages
+nmap <leader>vu <Action>(ShowUsages)
+
+" Show parameter info of current parameter list
+imap <C-p> <Action>(ParameterInfo)
+nmap <C-p> <Action>(ParameterInfo)
 
 "create new Element i.e class,interface ...
 nmap <leader>ce <Action>(NewElement)
