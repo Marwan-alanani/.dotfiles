@@ -167,6 +167,7 @@ function nopen()
 
 # enable vim mode
 bindkey -v
+export GDED="ESLAM"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

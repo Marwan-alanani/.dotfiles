@@ -45,6 +45,14 @@ nmap <leader>e :action ActivateProjectToolWindow<CR><ESC>
 " Hide project explorer
 nmap <leader>h <Action>(HideActiveWindow)
 
+" Open problems tool window or code action
+nmap <leader>ca <Action>(ActivateProblemsViewToolWindow)
+
+"Generate code
+nmap <leader>g <Action>(Generate)
+nmap <C-l> <C-w>l
+nmap <C-h> <C-w>h
+
 "format document
 nmap <leader>f <Action>(ReformatCode)
 
@@ -67,6 +75,8 @@ nmap <leader>sg <Action>(FindInPath)
 nmap K <Action>(ShowHoverInfo)
 imap <C-k> <Action>(ShowHoverInfo)
 
+"Toggle Inlay hints
+nmap <leader>th <Action>(ToggleInlayHintsGloballyAction)
 
 
 " run
@@ -94,9 +104,9 @@ nmap <leader>vr <Action>(RecentFiles)
 nmap <leader>vu <Action>(ShowUsages)
 
 " Show parameter info of current parameter list
-"imap <C-p> <Action>(ParameterInfo)
-imap <C-(> <Action>(ParameterInfo)
-nmap <C-p> <Action>(ParameterInfo)
+imap <C-i> <Action>(ParameterInfo)
+"imap <C-(> <Action>(ParameterInfo)
+nmap <C-i> <Action>(ParameterInfo)
 
 "create new Element i.e class,interface ...
 nmap <leader>ce <Action>(NewElement)

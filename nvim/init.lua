@@ -19,7 +19,6 @@ P.S. You can delete this when you're done too. It's your config now! :)
 --   NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
-
 vim.g.have_nerd_font = true
 
 -- [[ Setting options ]]
@@ -139,6 +138,10 @@ autocmd('LspAttach', {
     vim.keymap.set('n', ']d', function()
       vim.diagnostic.get_prev()
     end, opts)
+
+    vim.keymap.set('n', 'gi', function()
+      vim.lsp.buf.implementation(opts)
+    end)
   end,
 })
 
@@ -229,7 +232,7 @@ require('lazy').setup({
         -- Disable "format_on_save lsp_fallback" for languages that don't
         -- have a well standardized coding style. You can add additional
         -- languages here or re-enable it for the disabled ones.
-        local disable_filetypes = { c = true, cpp = true }
+        local disable_filetypes = { c = true, cpp = true, lua = true }
         local lsp_format_opt
         if disable_filetypes[vim.bo[bufnr].filetype] then
           lsp_format_opt = 'never'
@@ -242,7 +245,7 @@ require('lazy').setup({
         }
       end,
       formatters_by_ft = {
-        lua = { 'stylua' },
+        lua = {},
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --
