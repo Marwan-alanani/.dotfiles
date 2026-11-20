@@ -1,9 +1,9 @@
-<scheme name="rosey earth" version="142" parent_scheme="Darcula">
+<scheme name="Quiet Rose" version="142" parent_scheme="Darcula">
   <option name="FONT_SCALE" value="1.0" />
   <metaInfo>
     <property name="ide">idea</property>
     <property name="ideVersion">2026.2.0.0</property>
-    <property name="originalScheme">rosey earth</property>
+    <property name="originalScheme">Quiet Rose</property>
   </metaInfo>
   <option name="LINE_SPACING" value="1.2" />
   <option name="EDITOR_FONT_SIZE" value="22" />
