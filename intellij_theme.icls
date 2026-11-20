@@ -1,9 +1,9 @@
-<scheme name="rosey earth copy" version="142" parent_scheme="Darcula">
+<scheme name="rosey earth" version="142" parent_scheme="Darcula">
   <option name="FONT_SCALE" value="1.0" />
   <metaInfo>
     <property name="ide">idea</property>
     <property name="ideVersion">2026.2.0.0</property>
-    <property name="originalScheme">rosey earth copy</property>
+    <property name="originalScheme">rosey earth</property>
   </metaInfo>
   <option name="LINE_SPACING" value="1.2" />
   <option name="EDITOR_FONT_SIZE" value="22" />
@@ -377,7 +377,7 @@
     </option>
     <option name="DEFAULT_ATTRIBUTE">
       <value>
-        <option name="FOREGROUND" value="75b9b0" />
+        <option name="FOREGROUND" value="9297b8" />
       </value>
     </option>
     <option name="DEFAULT_BRACES">
@@ -435,7 +435,7 @@
     </option>
     <option name="DEFAULT_ENTITY">
       <value>
-        <option name="FOREGROUND" value="a3be8c" />
+        <option name="FOREGROUND" value="a995c5" />
       </value>
     </option>
     <option name="DEFAULT_FUNCTION_CALL">
@@ -508,7 +508,7 @@
     </option>
     <option name="DEFAULT_NUMBER">
       <value>
-        <option name="FOREGROUND" value="a3be8c" />
+        <option name="FOREGROUND" value="b18fa6" />
       </value>
     </option>
     <option name="DEFAULT_OPERATION_SIGN">
@@ -564,12 +564,12 @@
     </option>
     <option name="DEFAULT_STRING">
       <value>
-        <option name="FOREGROUND" value="a3be8c" />
+        <option name="FOREGROUND" value="96be78" />
       </value>
     </option>
     <option name="DEFAULT_TAG">
       <value>
-        <option name="FOREGROUND" value="83b8de" />
+        <option name="FOREGROUND" value="ac858d" />
       </value>
     </option>
     <option name="DEFAULT_TEMPLATE_LANGUAGE_COLOR">
@@ -869,7 +869,7 @@
     </option>
     <option name="JSON.PROPERTY_KEY">
       <value>
-        <option name="FOREGROUND" value="ff9696" />
+        <option name="FOREGROUND" value="83afcb" />
       </value>
     </option>
     <option name="JSP_DIRECTIVE_NAME">
@@ -1573,7 +1573,7 @@
     <option name="XML_ENTITY_REFERENCE" baseAttributes="DEFAULT_ENTITY" />
     <option name="XML_NS_PREFIX">
       <value>
-        <option name="FOREGROUND" value="ffc86e" />
+        <option name="FOREGROUND" value="a995c5" />
       </value>
     </option>
     <option name="XML_PROLOGUE">
@@ -1582,7 +1582,7 @@
     <option name="XML_TAG" baseAttributes="DEFAULT_TAG" />
     <option name="XML_TAG_NAME">
       <value>
-        <option name="FOREGROUND" value="ff9696" />
+        <option name="FOREGROUND" value="ac858d" />
       </value>
     </option>
     <option name="XPATH.FUNCTION" baseAttributes="DEFAULT_FUNCTION_CALL" />
@@ -1595,12 +1595,12 @@
     <option name="XPATH.XPATH_VARIABLE" baseAttributes="DEFAULT_LOCAL_VARIABLE" />
     <option name="YAML_ANCHOR">
       <value>
-        <option name="FOREGROUND" value="ffc86e" />
+        <option name="FOREGROUND" value="a995c5" />
       </value>
     </option>
     <option name="YAML_SCALAR_KEY">
       <value>
-        <option name="FOREGROUND" value="ff9696" />
+        <option name="FOREGROUND" value="83afcb" />
       </value>
     </option>
     <option name="YAML_SCALAR_LIST">
