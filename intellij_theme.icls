@@ -440,12 +440,12 @@
     </option>
     <option name="DEFAULT_FUNCTION_CALL">
       <value>
-        <option name="FOREGROUND" value="91c8b9" />
+        <option name="FOREGROUND" value="6f9fa6" />
       </value>
     </option>
     <option name="DEFAULT_FUNCTION_DECLARATION">
       <value>
-        <option name="FOREGROUND" value="91c8b9" />
+        <option name="FOREGROUND" value="6f9fa6" />
       </value>
     </option>
     <option name="DEFAULT_GLOBAL_VARIABLE">
