@@ -392,7 +392,7 @@
     </option>
     <option name="DEFAULT_CLASS_NAME">
       <value>
-        <option name="FOREGROUND" value="8eabc5" />
+        <option name="FOREGROUND" value="83afcb" />
       </value>
     </option>
     <option name="DEFAULT_CLASS_REFERENCE">
@@ -465,12 +465,12 @@
     </option>
     <option name="DEFAULT_INSTANCE_METHOD">
       <value>
-        <option name="FOREGROUND" value="91c8b9" />
+        <option name="FOREGROUND" value="6f9fa6" />
       </value>
     </option>
     <option name="DEFAULT_INTERFACE_NAME">
       <value>
-        <option name="FOREGROUND" value="8eabc5" />
+        <option name="FOREGROUND" value="83afcb" />
       </value>
     </option>
     <option name="DEFAULT_INVALID_STRING_ESCAPE">
@@ -558,7 +558,7 @@
     </option>
     <option name="DEFAULT_STATIC_METHOD">
       <value>
-        <option name="FOREGROUND" value="91c8b9" />
+        <option name="FOREGROUND" value="6f9fa6" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
