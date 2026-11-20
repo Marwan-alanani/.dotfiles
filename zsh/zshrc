@@ -8,6 +8,7 @@ export PATH="${HOME}/.config/rofi/applets/bin:${PATH}"
 export PATH="${HOME}/.fzf/bin:${PATH}"
 
 export GREP_OPTIONS='--color=auto'
+export GTK_THEME=Adwaita-dark
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -88,7 +89,6 @@ plugins=(
   zsh-syntax-highlighting
   colored-man-pages
   python
-  z
   )
 # source <(fzf --zsh)
 source $ZSH/oh-my-zsh.sh
@@ -154,7 +154,7 @@ function cdate()
 #open file from terminal with no hangup call
 function nopen()
 {
-	nohup thunar $1 &
+	nohup nautilus $1 &
 	if [ -d $1 ];then
 	  sleep 0.5;
 	  rm "$1/nohup.out"
@@ -167,14 +167,36 @@ function nopen()
 
 # enable vim mode
 bindkey -v
-export GDED="ESLAM"
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# Set up fzf key bindings and fuzzy completion
-source <(fzf --zsh)
-
 
 # export NVM_DIR="$HOME/.nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export PATH=$PATH:$HOME/go/bin
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export QT_IM_MODULE=ibus
+
+# completions for z
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# Set up fzf key bindings and fuzzy completion
+#
+export FZF_DEFAULT_OPTS_FILE="$HOME/.fzfrc"
+export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git"'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+export FZF_CTRL_T_OPTS='
+  --preview "bat --color=always --style=numbers --line-range=:300 {}"
+'
+source <(fzf --zsh)
+. ~/.z.sh
+
+unalias z 2> /dev/null
+z() {
+  local dir=$(
+    _z 2>&1 |
+    fzf --height 40% --layout reverse --info inline \
+        --nth 2.. --tac --no-sort --query "$*" \
+        --accept-nth 2..
+  ) && cd "$dir"
+}
+source ~/.dotfiles/fzf/fzf-git.sh
