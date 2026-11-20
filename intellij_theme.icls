@@ -1,9 +1,9 @@
-<scheme name="rosey earth" version="142" parent_scheme="Darcula">
+<scheme name="rosey earth copy" version="142" parent_scheme="Darcula">
   <option name="FONT_SCALE" value="1.0" />
   <metaInfo>
     <property name="ide">idea</property>
     <property name="ideVersion">2026.2.0.0</property>
-    <property name="originalScheme">rosey earth</property>
+    <property name="originalScheme">rosey earth copy</property>
   </metaInfo>
   <option name="LINE_SPACING" value="1.2" />
   <option name="EDITOR_FONT_SIZE" value="22" />
@@ -69,7 +69,7 @@
     <option name="RIGHT_MARGIN_COLOR" value="636669" />
     <option name="SELECTED_INDENT_GUIDE" value="636669" />
     <option name="SELECTED_TEARLINE_COLOR" value="636669" />
-    <option name="SELECTION_BACKGROUND" value="173D59" />
+    <option name="SELECTION_BACKGROUND" value="343B43" />
     <option name="ScrollBar.Mac.background" value="00000000" />
     <option name="TABS" value="AFB9C3" />
     <option name="TEARLINE_COLOR" value="373C41" />
