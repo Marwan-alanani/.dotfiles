@@ -394,12 +394,12 @@
     </option>
     <option name="DEFAULT_BRACES">
       <value>
-        <option name="FOREGROUND" value="9a9ca3" />
+        <option name="FOREGROUND" value="b2b4ba" />
       </value>
     </option>
     <option name="DEFAULT_BRACKETS">
       <value>
-        <option name="FOREGROUND" value="9a9ca3" />
+        <option name="FOREGROUND" value="b2b4ba" />
       </value>
     </option>
     <option name="DEFAULT_CLASS_NAME">
@@ -414,7 +414,7 @@
     </option>
     <option name="DEFAULT_COMMA">
       <value>
-        <option name="FOREGROUND" value="9a9ca3" />
+        <option name="FOREGROUND" value="b2b4ba" />
       </value>
     </option>
     <option name="DEFAULT_CONSTANT">
@@ -443,7 +443,7 @@
     </option>
     <option name="DEFAULT_DOT">
       <value>
-        <option name="FOREGROUND" value="9a9ca3" />
+        <option name="FOREGROUND" value="b2b4ba" />
       </value>
     </option>
     <option name="DEFAULT_ENTITY">
@@ -527,12 +527,12 @@
     </option>
     <option name="DEFAULT_OPERATION_SIGN">
       <value>
-        <option name="FOREGROUND" value="9a9ca3" />
+        <option name="FOREGROUND" value="b2b4ba" />
       </value>
     </option>
     <option name="DEFAULT_PARENTHS">
       <value>
-        <option name="FOREGROUND" value="9a9ca3" />
+        <option name="FOREGROUND" value="b2b4ba" />
       </value>
     </option>
     <option name="DEFAULT_PREDEFINED_SYMBOL">
@@ -557,7 +557,7 @@
     </option>
     <option name="DEFAULT_SEMICOLON">
       <value>
-        <option name="FOREGROUND" value="9a9ca3" />
+        <option name="FOREGROUND" value="b2b4ba" />
       </value>
     </option>
     <option name="DEFAULT_STATIC_FIELD">
